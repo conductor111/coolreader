@@ -101,6 +101,7 @@ deploy_package()
 		then
 			rm -f "${SRCFILE}"
 		fi
+		echo ${URL}
 		curl -f -L -O ${URL} || die "Failed to fetch sources!"
 		if [ ! -f "${SRCFILE}" ]
 		then
